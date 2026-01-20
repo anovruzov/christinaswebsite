@@ -210,6 +210,33 @@ body {
     color: #f3e8ff;
 }
 
+.learn-page .tips-box {
+    background: var(--white);
+    border: 1px solid #eee7f4;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    padding: 1.8rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.learn-page .tips-box h2 {
+    margin-bottom: 1rem;
+}
+
+.learn-page .tips-box p {
+    margin-bottom: 1.25rem;
+}
+
+.learn-page .tips-box ul {
+    padding-left: 1.2rem;
+    line-height: 1.7;
+}
+
+.learn-page .tips-box li {
+    margin-bottom: 0.75rem;
+}
+
 /* Image Containers */
 .image-container {
     text-align: center;
