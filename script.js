@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (href === 'checklist.html' || href === './checklist.html') link.setAttribute('href', '/checklist.html');
         if (href === 'contact.html' || href === './contact.html') link.setAttribute('href', '/contact.html');
         if (href === 'index.html' || href === './index.html') link.setAttribute('href', '/index.html');
-        if (href === 'learn/index.html' || href === './learn/index.html') link.setAttribute('href', '/learn/index.html');
+        if (href === 'learn.html' || href === './learn.html' || href === 'learn/index.html' || href === './learn/index.html') link.setAttribute('href', '/learn.html');
 
         // Force News link to absolute navigation to avoid accidental hash routing
         const normalizedHref = link.getAttribute('href');

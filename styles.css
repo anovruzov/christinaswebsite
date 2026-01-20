@@ -188,6 +188,28 @@ body {
     color: var(--text-color);
 }
 
+/* Learn page questions */
+.learn-page .question-text {
+    color: var(--primary-color);
+}
+
+/* Learn page background */
+.learn-page .page-section {
+    background-color: var(--lavender-bg);
+    color: var(--text-color);
+}
+
+.learn-page .learn-hero {
+    padding: 3rem 0 2.5rem;
+    background: linear-gradient(135deg, #2e1247 0%, #4a2a6b 60%, #5b3b82 100%);
+    color: #f3e8ff;
+    text-align: center;
+}
+
+.learn-page .learn-hero .question-text {
+    color: #f3e8ff;
+}
+
 /* Image Containers */
 .image-container {
     text-align: center;
