@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Toggle menu on button click
-    if (menuToggle && navList) {
+    if (menuToggle) {
         menuToggle.addEventListener('click', function() {
             navList.classList.toggle('active');
             menuToggle.classList.toggle('active');
