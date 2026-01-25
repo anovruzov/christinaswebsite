@@ -222,10 +222,15 @@ body {
 }
 
 .learn-page .learn-hero {
-    padding: 3rem 0 2.5rem;
+    padding: 2.5rem 0 1.25rem;
     background-color: var(--lavender-bg);
     color: var(--primary-color);
     text-align: center;
+}
+
+.learn-page .content-wrapper {
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
 }
 
 .learn-page .learn-hero .question-text {
@@ -516,7 +521,7 @@ body {
 .learn-hero {
     background-color: var(--lavender-bg);
     color: var(--primary-color);
-    padding: 6vw 0;
+    padding: 3rem 0 1.5rem;
     text-align: center;
 }
 
@@ -529,6 +534,7 @@ body {
     color: var(--primary-color);
     border: 1px solid #eee7f4;
     box-shadow: none;
+    padding: 2.5rem 2rem;
 }
 
 .learn-content h1 {
@@ -1085,8 +1091,10 @@ body {
 .about-intro {
     max-width: 620px;
     font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.5;
+    font-weight: 700;
     color: var(--primary-color);
+    text-align: center;
 }
 
 .about-section {
