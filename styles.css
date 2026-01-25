@@ -879,6 +879,10 @@ body {
     color: var(--primary-color);
 }
 
+.hero-sub.hero-sub-discount {
+    margin-top: 1.6rem;
+}
+
 .doc-box {
     border: 1px solid var(--border-color);
     border-radius: 10px;
@@ -955,6 +959,10 @@ body {
     margin-bottom: 2rem;
 }
 
+.body-inner .body-block:last-child {
+    margin-bottom: 1rem;
+}
+
 .body-block h2 {
     font-size: 1.6rem;
     color: var(--secondary-color);
@@ -985,7 +993,7 @@ body {
 .checklist-docs {
     background-color: var(--pastel-lavender);
     color: var(--text-color);
-    padding: 6vw 0;
+    padding: 3vw 0 6vw;
 }
 
 /* About Page */
