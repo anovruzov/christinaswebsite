@@ -570,8 +570,8 @@ body {
 .services-hero {
     position: relative;
     width: 100%;
-    min-height: 280px;
-    max-height: 340px;
+    min-height: 140px;
+    max-height: 190px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -596,7 +596,7 @@ body {
 
 @media (max-width: 768px) {
     .services-hero {
-        min-height: 220px;
+        min-height: 140px;
     }
 
     .services-hero-overlay h1 {
@@ -612,7 +612,7 @@ body {
 
 .services-section {
     background-color: var(--lavender-bg);
-    padding: 6vw 0;
+    padding: 24px 0 48px;
 }
 
 .services-wrapper {
