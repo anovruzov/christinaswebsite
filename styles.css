@@ -1086,7 +1086,7 @@ body {
     max-width: 620px;
     font-size: 1rem;
     line-height: 1.7;
-    color: #f3e8ff;
+    color: var(--primary-color);
 }
 
 .about-section {
