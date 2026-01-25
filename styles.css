@@ -989,6 +989,15 @@ body {
     line-height: 1.7;
 }
 
+.underline-strong {
+    display: inline-block;
+    text-decoration-line: underline;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-skip-ink: auto;
+}
+
 .notice-block {
     background: var(--white);
     padding: 1.6rem;
