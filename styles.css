@@ -223,13 +223,13 @@ body {
 
 .learn-page .learn-hero {
     padding: 3rem 0 2.5rem;
-    background: linear-gradient(135deg, #2e1247 0%, #4a2a6b 60%, #5b3b82 100%);
-    color: #f3e8ff;
+    background-color: var(--lavender-bg);
+    color: var(--primary-color);
     text-align: center;
 }
 
 .learn-page .learn-hero .question-text {
-    color: #f3e8ff;
+    color: var(--primary-color);
 }
 
 .learn-page .tips-box {
@@ -308,16 +308,41 @@ body {
 }
 
 /* Mission Section */
+
 .mission-section {
-    background: linear-gradient(135deg, rgba(62, 29, 89, 0.9), rgba(62, 29, 89, 0.75));
-    background-attachment: fixed;
-    min-height: 43vh;
+    position: relative;
+    overflow: hidden;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--primary-color);
+}
+
+.mission-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('leaf-5326863_1920.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 0;
+    opacity: 1;
+}
+
+.mission-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(62, 29, 89, 0.3), rgba(62, 29, 89, 0.2));
+    z-index: 0;
 }
 
 .mission-content {
+    position: relative;
+    z-index: 1;
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
@@ -370,10 +395,10 @@ body {
 
 .profile-and-badge {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2.5rem;
     margin: 2.5rem 0 2rem;
 }
 
@@ -403,7 +428,7 @@ body {
 }
 
 .irs-badge {
-    max-width: 200px;
+    max-width: 140px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -428,6 +453,11 @@ body {
     color: var(--secondary-color);
     font-style: italic;
     font-weight: 700;
+}
+
+.warnings .warning-emphasis {
+    font-style: normal;
+    font-weight: 900;
 }
 
 /* Enrolled Agents Box */
@@ -484,14 +514,21 @@ body {
 }
 
 .learn-hero {
-    background: linear-gradient(135deg, rgba(62, 29, 89, 0.92), rgba(62, 29, 89, 0.8));
-    color: var(--white);
+    background-color: var(--lavender-bg);
+    color: var(--primary-color);
     padding: 6vw 0;
     text-align: center;
 }
 
 .learn-content {
     border: 1px solid #eee7f4;
+}
+
+.learn-hero-box {
+    background-color: var(--lavender-bg);
+    color: var(--primary-color);
+    border: 1px solid #eee7f4;
+    box-shadow: none;
 }
 
 .learn-content h1 {
@@ -538,15 +575,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(62, 29, 89, 0.9), rgba(62, 29, 89, 0.75));
+    background-color: var(--lavender-bg);
     text-align: center;
 }
 
 .services-hero-overlay h1 {
-    color: var(--white);
+    color: var(--primary-color);
     font-size: 2.5rem;
     letter-spacing: 0.4rem;
     font-weight: 600;
+}
+
+.services-subtitle {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-top: 0.6rem;
+    letter-spacing: 0.08rem;
+    font-weight: 700;
 }
 
 @media (max-width: 768px) {
@@ -557,6 +602,11 @@ body {
     .services-hero-overlay h1 {
         font-size: 2rem;
         letter-spacing: 0.25rem;
+    }
+
+    .services-subtitle {
+        font-size: 1.1rem;
+        letter-spacing: 0.05rem;
     }
 }
 
@@ -636,8 +686,9 @@ body {
 /* Contact Page */
 
 .contact-hero {
-    background: linear-gradient(135deg, rgba(62, 29, 89, 0.92), rgba(62, 29, 89, 0.8));
-    color: var(--white);
+    background-color: var(--lavender-bg);
+    background-image: none;
+    color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -650,17 +701,17 @@ body {
     font-size: 2.4rem;
     letter-spacing: 0.2rem;
     margin-bottom: 1rem;
-    color: var(--white);
+    color: var(--primary-color);
 }
 
 .contact-hero-inner p {
     font-size: 1.1rem;
     margin: 0.5rem 0;
-    color: #f3e8ff;
+    color: var(--primary-color);
 }
 
 .contact-hero-inner a {
-    color: #f3e8ff;
+    color: var(--primary-color);
     text-decoration: underline;
     font-weight: 600;
 }
@@ -760,23 +811,64 @@ body {
 }
 
 /* Checklist Page */
+.floating-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: clamp(340px, 38vw, 520px);
+    background: var(--lavender-bg);
+    isolation: isolate;
+}
+
+.floating-hero::before,
+.floating-hero::after {
+    content: none;
+}
+
+@keyframes float-blobs {
+    0%   { transform: translate3d(0, 0, 0) scale(1); }
+    50%  { transform: translate3d(8%, -6%, 0) scale(1.05); }
+    100% { transform: translate3d(-6%, 10%, 0) scale(1.1); }
+}
+
+@keyframes float-blobs-2 {
+    0%   { transform: translate3d(0, 0, 0) scale(1); }
+    50%  { transform: translate3d(-6%, 6%, 0) scale(1.08); }
+    100% { transform: translate3d(5%, -8%, 0) scale(1.12); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .floating-hero::before,
+    .floating-hero::after {
+        animation: none;
+    }
+
+    .floating-hero {
+        animation: none;
+    }
+}
+
+@keyframes vertical-gradient-shift {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 40%; }
+}
+
 .checklist-hero {
-    background: linear-gradient(135deg, rgba(62, 29, 89, 0.92), rgba(62, 29, 89, 0.8));
-    color: var(--white);
+    background: transparent;
+    color: var(--primary-color);
     padding: 6vw 0;
+    position: relative;
+    z-index: 1;
 }
 
 .checklist-hero-inner {
     text-align: center;
 }
 
-
-
 .checklist-hero h1 {
     font-size: 2.4rem;
     letter-spacing: 0.12em;
     margin-bottom: 1rem;
-    color: var(--white);
+    color: var(--primary-color);
 }
 
 .hero-sub {
@@ -784,7 +876,7 @@ body {
     letter-spacing: 0.05em;
     max-width: 900px;
     margin: 0 auto;
-    color: #f3e8ff;
+    color: var(--primary-color);
 }
 
 .doc-box {
@@ -904,16 +996,16 @@ body {
 }
 
 .about-hero {
-    background: linear-gradient(135deg, rgba(62, 29, 89, 0.92), rgba(62, 29, 89, 0.8));
-    color: var(--white);
+    background-color: var(--lavender-bg);
+    color: var(--primary-color);
     padding: 5vw 0 4vw;
 }
 
 .about-hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1.8rem;
 }
 
 .headshot-card {
@@ -922,8 +1014,8 @@ body {
 }
 
 .headshot-image {
-    width: 300px;
-    height: 300px;
+    width: 405px;
+    height: 405px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid #f3e8ff;
@@ -937,33 +1029,49 @@ body {
     font-weight: 600;
 }
 
+.about-hero-text {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
 .about-hero-text h1 {
     font-size: 2.2rem;
     margin-bottom: 0.4rem;
-    color: var(--white);
+    color: var(--primary-color);
+    text-align: center;
 }
 
 .about-hero-text .role {
     font-size: 1.05rem;
     margin-bottom: 1rem;
     font-weight: 600;
-    color: #f3e8ff;
+    color: var(--primary-color);
+    text-align: center;
 }
 
 .about-badge {
     display: inline-flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.6rem;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 12px;
-    padding: 0.75rem 1rem;
-    margin-bottom: 1rem;
+    padding: 0.9rem 1.2rem;
+    margin: 0 auto 1rem;
+    justify-content: center;
+    text-align: center;
 }
 
 .about-badge-img {
-    width: 70px;
+    width: 118px;
     height: auto;
+}
+
+.about-badge span {
+    display: block;
+    text-align: center;
 }
 
 .about-intro {
@@ -1051,8 +1159,8 @@ body {
 
 /* News Page */
 .news-hero {
-    background: linear-gradient(135deg, rgba(62, 29, 89, 0.92), rgba(62, 29, 89, 0.8));
-    color: var(--white);
+    background-color: var(--lavender-bg);
+    color: var(--primary-color);
     padding: 5vw 0;
     text-align: center;
 }
@@ -1060,7 +1168,7 @@ body {
 .news-hero h1 {
     letter-spacing: 0.08em;
     font-size: 2.1rem;
-    color: var(--white);
+    color: var(--primary-color);
 }
 
 .news-section {
