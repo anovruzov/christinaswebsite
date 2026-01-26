@@ -989,6 +989,82 @@ body {
     line-height: 1.7;
 }
 
+/* Tax Extensions Section */
+#tax-extensions {
+    text-align: left;
+    margin-bottom: 2.5rem;
+}
+
+#tax-extensions h2 {
+    color: var(--secondary-color);
+    letter-spacing: 0.08em;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.extension-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.extension-card {
+    background: var(--white);
+    border: 1px solid #e8dff4;
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.extension-card h3 {
+    color: var(--secondary-color);
+    font-size: 1.25rem;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.35rem;
+}
+
+.extension-subtitle {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.extension-list {
+    list-style: disc;
+    padding-left: 1.2rem;
+    line-height: 1.6;
+    margin: 0.25rem 0 0;
+}
+
+.extension-list li {
+    margin: 0.35rem 0;
+}
+
+.franchise-card .franchise-warning {
+    font-weight: 700;
+    color: var(--red-accent);
+}
+
+.extension-callout {
+    margin: 1rem 0 1.2rem;
+    padding: 0.9rem 1rem;
+    background: var(--lavender-bg);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 10px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.extension-full {
+    width: 100%;
+}
+
+.extension-detail {
+    margin: 0.3rem 0 0;
+    line-height: 1.6;
+}
+
 .underline-strong {
     display: inline-block;
     text-decoration-line: underline;
@@ -1268,6 +1344,12 @@ body {
 
     .about-columns {
         columns: 1;
+    }
+}
+
+@media (max-width: 820px) {
+    .extension-grid {
+        grid-template-columns: 1fr;
     }
 }
 
