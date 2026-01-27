@@ -991,8 +991,9 @@ body {
 
 /* Tax Extensions Section */
 #tax-extensions {
-    text-align: left;
-    margin-bottom: 2.5rem;
+    text-align: center;
+    margin: 0 auto 2.5rem;
+    max-width: 1100px;
 }
 
 #tax-extensions h2 {
@@ -1007,6 +1008,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
+    justify-content: center;
 }
 
 .extension-card {
@@ -1015,6 +1017,7 @@ body {
     border-radius: 12px;
     padding: 1.2rem 1.4rem;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+    text-align: left;
 }
 
 .extension-card h3 {
