@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Guard against unwanted #news anchors
     if (window.location.hash === '#news') {
-        window.location.replace('news-evennts.html');
+        window.location.replace('news-events.html');
         return;
     }
     const menuToggle = document.getElementById('menu-toggle');
